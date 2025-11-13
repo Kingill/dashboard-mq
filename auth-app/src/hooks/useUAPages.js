@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const API_BASE_URL = 'http://localhost:3001/api';
+// Utilise la variable d'environnement ou fallback vers proxy
+const API_BASE_URL = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api';
 
 export function useUAPages() {
   const [uaPages, setUaPages] = useState({});

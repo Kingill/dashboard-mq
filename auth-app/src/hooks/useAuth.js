@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const AUTH_KEY = 'dashboard_mq_auth';
+// Utilise la variable d'environnement ou fallback vers localhost
+const OAUTH_URL = import.meta.env.VITE_OAUTH_URL || 'http://localhost:8000';
 
 export function useAuth() {
   const [authState, setAuthState] = useState({
@@ -179,7 +181,7 @@ export function useAuth() {
         client_id: 'FBI-Appli-Demo'
       });
 
-      const response = await fetch('http://localhost:8000/oauth/token', {
+      const response = await fetch(`${OAUTH_URL}/oauth/token`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params.toString()

@@ -56,14 +56,6 @@ export default function AdminPanel({
         </p>
       </div>
 
-      <div style={styles.info}>
-        🔄 <strong>API Backend</strong><br/>
-        Les pages UA sont gérées par l'API sur <code>http://localhost:3001/api</code><br/>
-        • Les données sont stockées dans <code>/public/ua-pages/</code><br/>
-        • Les modifications sont automatiquement sauvegardées sur le serveur<br/>
-        • Support multi-utilisateurs (⚠️ dernière sauvegarde écrase les précédentes)
-      </div>
-
       {/* Créer une nouvelle page UA */}
       <div style={styles.cardLarge}>
         <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '16px', display: 'flex', alignItems: 'center' }}>
