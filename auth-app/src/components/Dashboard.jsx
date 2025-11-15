@@ -160,55 +160,6 @@ export default function Dashboard({
       )}
 
       {/* Métriques anciennes (à conserver ou supprimer selon vos besoins) */}
-      {displayPage.metrics && !editMode && (
-        <>
-          <div style={styles.metricsGrid}>
-            <div style={styles.metricCard}>
-              <div style={{ ...styles.metricIcon, background: '#e6fffa' }}>
-                <Activity size={28} color="#38b2ac" />
-              </div>
-              <div style={styles.metricContent}>
-                <p style={styles.metricLabel}>Messages traités</p>
-                <p style={styles.metricValue}>1,247</p>
-                <p style={styles.metricChange}>↑ 12% ce mois</p>
-              </div>
-            </div>
-
-            <div style={styles.metricCard}>
-              <div style={{ ...styles.metricIcon, background: '#fef5e7' }}>
-                <BarChart3 size={28} color="#ed8936" />
-              </div>
-              <div style={styles.metricContent}>
-                <p style={styles.metricLabel}>Taux de succès</p>
-                <p style={styles.metricValue}>98.5%</p>
-                <p style={styles.metricChange}>↑ 2.1%</p>
-              </div>
-            </div>
-
-            <div style={styles.metricCard}>
-              <div style={{ ...styles.metricIcon, background: '#e6f2ff' }}>
-                <Users size={28} color="#667eea" />
-              </div>
-              <div style={styles.metricContent}>
-                <p style={styles.metricLabel}>Utilisateurs actifs</p>
-                <p style={styles.metricValue}>24</p>
-                <p style={styles.metricChange}>↓ 3 depuis hier</p>
-              </div>
-            </div>
-
-            <div style={styles.metricCard}>
-              <div style={{ ...styles.metricIcon, background: '#fed7d7' }}>
-                <AlertCircle size={28} color="#f56565" />
-              </div>
-              <div style={styles.metricContent}>
-                <p style={styles.metricLabel}>Erreurs</p>
-                <p style={styles.metricValue}>3</p>
-                <p style={styles.metricChange}>↓ 75%</p>
-              </div>
-            </div>
-          </div>
-        </>
-      )}
 
       {/* Métriques Prometheus spécifiques à l'UA */}
       {displayPage.metrics && !editMode && selectedUA && (
